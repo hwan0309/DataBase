@@ -1,0 +1,29 @@
+SELECT * FROM cd.facilities;
+-- Q3--
+SELECT membercost,name
+FROM cd.facilities
+LIMIT 5;
+
+--#Q4--
+SELECT facid, name, membercost, monthlymaintenance
+FROM cd.facilities
+LIMIT 2;
+
+--#Q5--
+SELECT * FROM cd.facilities
+WHERE name = 'Tennis Court 1'
+LIMIT 3;
+
+--Q6--
+SELECT * FROM cd.facilities
+WHERE facid = 1
+LIMIT 2;
+
+--Q7--
+SELECT * FROM cd.facilities
+INNER JOIN cd.bookings
+ON cd.bookings.memid
+LIMIT 10
+ORDER BY desc;
+
+SELECT * FROM cd.facilities
